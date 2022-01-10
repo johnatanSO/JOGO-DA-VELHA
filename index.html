@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da velha</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h3>Built by Johnatan Santos Oliveira </h3>
+    <header>
+        
+        <div class="score">
+            <h2>Score player 1</h2>
+            <p class="points" id='p1'>0</p>
+        </div>
+
+        <h1>Jogo da velha</h1>
+
+        <div class="score">
+            <h2>Score player 2</h2>
+            <p class="points" id='p2'>0</p>
+        </div>
+        
+
+    </header>
+    
+    
+    <div class="stage">
+        <div>
+            <div id="0" class="square"></div>
+
+            <div id="1" class="square"></div>
+
+            <div id="2" class="square"></div>
+        </div>
+
+        <div>
+            <div id="3" class="square"></div>
+
+            <div id="4" class="square"></div>
+
+            <div id="5" class="square"></div>
+        </div>
+
+        <div>
+            <div id="6" class="square"></div>
+
+            <div id="7" class="square"></div>
+
+            <div id="8" class="square"></div>
+        </div>
+    </div>
+    <button onclick="resetGame()">Reset score</button>
+    
+    <div class="modal">
+        <div id="modalContent">
+            <a href="#fechar" title="Fechar" id="fechar">x</a>
+            <h2>Parabens!</h2>
+            <p>O player vencedor foi</p>
+            <p id="winnerPlayer"></p>
+            
+        </div>
+    </div>
+    
+    <script src="game.js"></script>
+    <script src="interface.js"></script>
+</body>
+</html>
