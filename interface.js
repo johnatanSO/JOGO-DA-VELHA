@@ -3,6 +3,8 @@ let p2 = document.getElementById('p2')
 let modal = document.getElementsByClassName('modal')[0]
 let fechar = document.getElementById('fechar')
 let winnerPlayer = document.getElementById('winnerPlayer')
+let text = document.getElementById('textFinal')
+let empateText = "Ninguém venceu"
 
 fechar.onclick = function(){
     modal.style.display = "none";
@@ -18,14 +20,20 @@ function handleClick(event){
     let square = event.target
     let position = square.id
 
-    if (handleMove(position)==true){
-
+    if(handleMove(position)==true){
         setTimeout(()=>{
             modal.style.display = "block"
             winnerPlayer.setAttribute("id", vencedor)
             resetRound()
         },100)
+    }else if(verificarEmpate() == true){
+        console.log('empate')
+        modal.style.display = 'block'
+        document.getElementById('text').style.display = 'none'
+        winnerPlayer.setAttribute('id', "empate")
+        resetRound()
     }
+
     updateSquare(position)
 }
 function updateSquare(position){
@@ -35,7 +43,7 @@ function updateSquare(position){
 }
 function resetRound() {
     board = ['','','','','','','','','']
-    
+    numeroDeJogadas = 0
     for(let position in board){
         updateSquare(position)
     }
@@ -47,5 +55,6 @@ function resetRound() {
 function resetGame(){
     scoreP1 = 0
     scoreP2 = 0
+    
     resetRound()
 }
