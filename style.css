@@ -1,39 +1,43 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
-body{
+
+body {
     text-align: center;
     background-color: rgb(28, 28, 28);
 }
-h3{
+
+h3 {
     color: white;
-    font-size:0.8rem
+    font-size: 0.8rem
 }
-h1{
+
+h1 {
     background-color: rgb(250, 41, 41);
     font-size: 1.5rem;
     box-shadow: 2px 2px 7px black;
     padding: 1rem;
     color: white;
-    margin:auto;
+    margin: auto;
     margin-top: 10px;
     width: 250px;
     border-radius: 0.3rem;
 }
 
-.stage{
+.stage {
     width: auto;
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     margin: auto;
     margin-top: -60px;
 }
-.square{
-    background-color:rgb(46, 46, 46);
+
+.square {
+    background-color: rgb(46, 46, 46);
     margin: 1vh 0.5vh;
     box-shadow: 2px 2px 7px black;
     width: 22vh;
@@ -43,32 +47,36 @@ h1{
     cursor: pointer;
     transition-duration: 0.2s;
     transition-property: background-color;
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
-.square:hover{
-    background-color: rgb(104, 104, 104) ;
+
+.square:hover {
+    background-color: rgb(104, 104, 104);
 }
 
-.o::after{
+.o::after {
     content: "\2B55";
     font-size: 70px;
     line-height: 150px;
-   
+
     animation: opO 0.3s;
 }
-#empate::after{
+
+#empate::after {
     content: "Nenhum vencedor!";
 }
-.x::after{
+
+.x::after {
     content: "\2716";
     font-size: 100px;
     line-height: 150px;
-    
+
     animation: opX 0.3s;
 }
-button{
+
+button {
     background-color: rgb(255, 0, 0);
     box-shadow: 2px 2px 7px black;
     border: none;
@@ -81,82 +89,95 @@ button{
     transition: 0.2s;
     transition-property: background-color;
 }
-button:hover{
+
+button:hover {
     background-color: grey;
     cursor: pointer;
 }
-header{
-    display: flex; 
-    margin:auto;
+
+header {
+    display: flex;
+    margin: auto;
     width: 90%;
     height: 185px;
 }
-h2{
-    color:white;
+
+h2 {
+    color: white;
     margin: 0;
 }
-.points{
+
+.points {
     color: white;
     font-size: 3rem;
     font-weight: 700;
 }
-.score{
-    display:flex;
+
+.score {
+    display: flex;
     flex-direction: column;
-    align-self:flex-end;
+    align-self: flex-end;
 }
-#modalContent{
+
+#modalContent {
     position: relative;
     width: 605px;
     margin: 20% auto;
     padding: 15px 20px;
     height: 200px;
     border-radius: 1rem;
-    background-color:white;  
-  }
-#modalContent h2{
-      color:white;
-      background-color:red;
-      position: absolute;
-      top:0;
-      width:100%;
-      right: 0;
-      left: 0;
-      border-radius: 1rem 1rem 0rem 0rem;
-      padding: 1rem;
+    background-color: white;
 }
-p{
+
+#modalContent h2 {
+    color: white;
+    background-color: red;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    right: 0;
+    left: 0;
+    border-radius: 1rem 1rem 0rem 0rem;
+    padding: 1rem;
+}
+
+p {
     margin-top: 11%;
     margin-bottom: -8%;
-    color:black;
+    color: black;
     font-size: 2rem;
 }
-#x{
-    position:relative;
+
+#x {
+    position: relative;
 }
-#x::after{
+
+#x::after {
     content: "\2716";
     font-size: 75px;
     line-height: 200px;
     position: absolute;
-    top:-80px;
+    top: -80px;
     left: 0;
     right: 0;
 }
-#o{
-    position:relative;
+
+#o {
+    position: relative;
 }
-#o::after{
+
+#o::after {
     content: "\2B55";
     font-size: 50px;
     position: absolute;
-    top:-10px;
+    top: -10px;
     left: 0;
     right: 0;
 }
-.modal{
-    display:none;
-    position:fixed;
+
+.modal {
+    display: none;
+    position: fixed;
     top: 0;
     bottom: 0;
     right: 0;
@@ -179,30 +200,35 @@ p{
     font-size: 16px;
     color: #8d0000;
     z-index: 9999999999;
-  }
+}
 
- @keyframes opO {
-     0%{
-         opacity: 0;
-         font-size: 50px;
-     }
-     80%{
-        font-size: 80px;
-     }
-     100%{
-         opacity: 1;
-         font-size: 70px;
-     }
- }
- @keyframes opX {
-    0%{
+@keyframes opO {
+    0% {
         opacity: 0;
         font-size: 50px;
     }
-    80%{
+
+    80% {
+        font-size: 80px;
+    }
+
+    100% {
+        opacity: 1;
+        font-size: 70px;
+    }
+}
+
+@keyframes opX {
+    0% {
+        opacity: 0;
+        font-size: 50px;
+    }
+
+    80% {
         font-size: 110px;
-     }
-    100%{
+    }
+
+    100% {
         opacity: 1;
         font-size: 100px;
     }
